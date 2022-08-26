@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2022/5/25 21:41
-# @Author  : yuxiaocui
 # @FileName: run.py
 # @Software: PyCharm
 import os
