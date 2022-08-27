@@ -5,12 +5,16 @@
 import os
 
 from loguru import logger
-
+import os
+import sys
+Base_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0,Base_DIR)
 from testscript import xlsx2xmind, xmindtoxlsx
 
 
 def run():
     print()
+    '''
     logger.info("\n"
                 "==================支持xmind转excel、excel转xmind================== \n"
                 "--------------------------注意事项如下：--------------------------\n\n"
@@ -22,7 +26,7 @@ def run():
                 "================================================================="
                 "\n"
                 "")
-
+'''
     filePath = input(r"请输入要转换的excel或xmind文件名(带目录)：")
     ext = filePath.split(".")[-1]
     ext=ext.rstrip('"')

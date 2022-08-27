@@ -22,17 +22,18 @@ def get_case(dict_a):
     :return:
     """
     case = {"title": [],"note":"","labels":"","makers":"","callout":""}
+
     def dicts_to_dict(dict_a):
         """
         将多层字典，变成单层
         :param dict_a:
         :return:
         """
-
         if isinstance(dict_a, dict):
             for k, v in dict_a.items():
                 if k=="title" :
                     case[k].append(v)
+                    #print(case)
                 if isinstance(v,dict) and k=="topics":
                     dicts_to_dict(v)
                 if k=="note":
@@ -47,9 +48,13 @@ def get_case(dict_a):
                     case[k] = v
                 if k == "callout":
                     case["callout"] = v[0]
+                #测试数据是否正常
+                #print(case)
+
     dicts_to_dict(dict_a)
-    if "priority" not in case["makers"]:
-        return {}
+    #if "priority" not in case["makers"]:
+    #    return {}
+    #print(case)
     return case
 
 def get_cases(xmindfile):
@@ -59,14 +64,23 @@ def get_cases(xmindfile):
     :return:
     """
     contentdatas = xmindparser.xmind_to_dict(xmindfile)
+    #print(contentdatas)
     casedatas = []
     for contentdata in contentdatas:
         caselists = flatten(contentdata["topic"])
+        #print(caselists)
         for caselist in caselists:
             caseDict = get_case(caselist)
-            if bool(caseDict):
-                casedatas.append(caseDict)
+            #print(caseDict)
+            #print(bool(caseDict))
+            #if bool(caseDict)== False:
+            casedatas.append(caseDict)
+                #print(caselists)
+                #print(casedatas)
+    #可用于调试
+    #print(casedatas)
     return casedatas
 
 if __name__ == '__main__':
+    get_cases(r'D:\work\学习记录\定制化\江苏银行\测试\江苏银行.xmind')
     ...

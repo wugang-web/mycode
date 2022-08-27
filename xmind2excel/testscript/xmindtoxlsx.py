@@ -2,23 +2,28 @@
 # _*_ coding:utf-8 _*_
 import logging
 import re
+import os
+import sys
+
+Base_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0,Base_DIR)
 from tools.csv_xlsx import csv_xlsx_tool
 from tools.xmindparserutils import get_cases
-
+from tools.conf import *
 def xmind_to_excel_file(xmind_file):
     """将xmind文件转换成csv"""
     logging.info('开始转换...', xmind_file)
-    # 从xmind获取每条用例信息
+    # 从xmind获取每条用例信息 函数有问题
     testcases = get_cases(xmind_file)
-
-    # 导出表格文件的表头
-    fileheader = ["用例名称", "前置条件", "用例步骤", "预期结果", "需求ID", "用例目录", "用例状态", "用例等级","备注"]
+    # 可用于修改导出表格文件的表头
+    #fileheader = ["用例名称", "前置条件", "用例步骤", "预期结果", "需求ID", "用例目录", "用例状态", "用例等级","备注"]
+    #print(fileheader)
     tapd_testcase_rows = []
     #
     for testcase in testcases:
         row = gen_a_testcase_row(testcase)
         tapd_testcase_rows.append(row)
-
+        #print(tapd_testcase_rows)
     csv_xlsx_tool().list_to_xlsx(tapd_testcase_rows,fileheader,xmind_file)
 
 # 按照规则转换生成每条表格用例
@@ -112,6 +117,6 @@ def gen_case_status(status):
 
 
 if __name__ == '__main__':
-    xmind_file = r'D:\project\bot3.0\资料库1.0.xmind'
+    xmind_file = r'D:\work\学习记录\定制化\江苏银行\测试\江苏银行.xmind'
     tapd_csv_file = xmind_to_excel_file(xmind_file)
 
