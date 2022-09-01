@@ -1,0 +1,685 @@
+---
+tests:
+#用例1
+- case:
+    description: "接口测试-创建普通系统规则"
+    level: "level0"
+    author: "zhoulingzhi"
+    update: "2021.05.06"
+  http:
+    method: POST
+    path: "/gateway/see-management/rule/create"
+    params:
+      name: 'keyword-Hello'
+      desc: '接口测试-创建普通系统规则-算子为关键词-文明用语'
+      type: 1
+      criticalType: 1
+      groupId: null
+      screenCondtion: [ ]
+      ruleCondition:
+        - conditionRelation: 0
+          violationMode: 1
+          conditions:
+            - owner: 2
+              checkScope: 1
+              includeType: 1
+              messageType: 2
+              scopeValue: ''
+              checkType: 2
+              checkValue:
+                - 您好
+              thresholdValue: ''
+          nextRelation: -1
+
+  expected:
+      code: 0
+      message: "SUCCESS"
+
+#用例2
+- case:
+    description: "接口测试-创建普通系统规则"
+    level: "level0"
+    author: "zhoulingzhi"
+    update: "2021.05.06"
+  http:
+    method: POST
+    path: "/gateway/see-management/rule/create"
+    params:
+      name: 'keyword-DearCustomers'
+      desc: '接口测试-创建普通系统规则-算子为关键词-文明用语'
+      type: 1
+      criticalType: 1
+      groupId: null
+      screenCondtion: [ ]
+      ruleCondition:
+        - conditionRelation: 0
+          violationMode: 1
+          conditions:
+            - owner: 2
+              checkScope: 1
+              includeType: 1
+              messageType: 2
+              scopeValue: ''
+              checkType: 2
+              checkValue:
+                - 尊敬的客户
+              thresholdValue: ''
+          nextRelation: -1
+  expected:
+      code: 0
+      message: "SUCCESS"
+#用例3
+- case:
+    description: "接口测试-创建普通系统规则"
+    level: "level0"
+    author: "zhoulingzhi"
+    update: "2021.05.06"
+  http:
+    method: POST
+    path: "/gateway/see-management/rule/create"
+    params:
+      name: 'keyword-dear'
+      desc: '接口测试-创建普通系统规则-算子为关键词-文明用语'
+      type: 1
+      criticalType: 1
+      groupId: null
+      screenCondtion: [ ]
+      ruleCondition:
+        - conditionRelation: 0
+          violationMode: 1
+          conditions:
+            - owner: 2
+              checkScope: 1
+              includeType: 1
+              messageType: 2
+              scopeValue: ''
+              checkType: 2
+              checkValue:
+                - 亲
+              thresholdValue: ''
+          nextRelation: -1
+
+  expected:
+      code: 0
+      message: "SUCCESS"
+
+#用例4
+- case:
+    description: "接口测试-创建普通系统规则"
+    level: "level0"
+    author: "zhoulingzhi"
+    update: "2021.05.06"
+  http:
+    method: POST
+    path: "/gateway/see-management/rule/create"
+    params:
+      name: 'keyword-darling'
+      desc: '接口测试-创建普通系统规则-算子为关键词-文明用语'
+      type: 1
+      criticalType: 1
+      groupId: null
+      screenCondtion: [ ]
+      ruleCondition:
+        - conditionRelation: 0
+          violationMode: 1
+          conditions:
+            - owner: 2
+              checkScope: 1
+              includeType: 1
+              messageType: 2
+              scopeValue: ''
+              checkType: 2
+              checkValue:
+                - 亲爱的
+              thresholdValue: ''
+          nextRelation: -1
+  expected:
+      code: 0
+      message: "SUCCESS"
+#用例5
+- case:
+    description: "接口测试-创建普通系统规则"
+    level: "level0"
+    author: "zhoulingzhi"
+    update: "2021.05.06"
+  http:
+    method: POST
+    path: "/gateway/see-management/rule/create"
+    params:
+      name: 'keyword-english-hello'
+      desc: '接口测试-创建普通系统规则-算子为关键词-文明用语'
+      type: 1
+      criticalType: 1
+      groupId: null
+      screenCondtion: [ ]
+      ruleCondition:
+        - conditionRelation: 0
+          violationMode: 1
+          conditions:
+            - owner: 2
+              checkScope: 1
+              includeType: 1
+              messageType: 2
+              scopeValue: ''
+              checkType: 2
+              checkValue:
+                - hello
+              thresholdValue: ''
+          nextRelation: -1
+
+  expected:
+      code: 0
+      message: "SUCCESS"
+
+#用例6
+- case:
+    description: "接口测试-创建普通系统规则"
+    level: "level0"
+    author: "zhoulingzhi"
+    update: "2021.05.06"
+  http:
+    method: POST
+    path: "/gateway/see-management/rule/create"
+    params:
+      name: 'keyword-GoodMorning'
+      desc: '接口测试-创建普通系统规则-算子为关键词-文明用语'
+      type: 1
+      criticalType: 1
+      groupId: null
+      screenCondtion: [ ]
+      ruleCondition:
+        - conditionRelation: 0
+          violationMode: 1
+          conditions:
+            - owner: 2
+              checkScope: 1
+              includeType: 1
+              messageType: 2
+              scopeValue: ''
+              checkType: 2
+              checkValue:
+                - 早上好
+              thresholdValue: ''
+          nextRelation: -1
+  expected:
+      code: 0
+      message: "SUCCESS"
+#用例7
+- case:
+    description: "接口测试-创建普通系统规则"
+    level: "level0"
+    author: "zhoulingzhi"
+    update: "2021.05.06"
+  http:
+    method: POST
+    path: "/gateway/see-management/rule/create"
+    params:
+      name: 'keyword-GoodAfternoon'
+      desc: '接口测试-创建普通系统规则-算子为关键词-文明用语'
+      type: 1
+      criticalType: 1
+      groupId: null
+      screenCondtion: [ ]
+      ruleCondition:
+        - conditionRelation: 0
+          violationMode: 1
+          conditions:
+            - owner: 2
+              checkScope: 1
+              includeType: 1
+              messageType: 2
+              scopeValue: ''
+              checkType: 2
+              checkValue:
+                - 下午好
+              thresholdValue: ''
+          nextRelation: -1
+
+  expected:
+      code: 0
+      message: "SUCCESS"
+
+#用例8
+- case:
+    description: "接口测试-创建普通系统规则"
+    level: "level0"
+    author: "zhoulingzhi"
+    update: "2021.05.06"
+  http:
+    method: POST
+    path: "/gateway/see-management/rule/create"
+    params:
+      name: 'keyword-GoodEvening'
+      desc: '接口测试-创建普通系统规则-算子为关键词-文明用语'
+      type: 1
+      criticalType: 1
+      groupId: null
+      screenCondtion: [ ]
+      ruleCondition:
+        - conditionRelation: 0
+          violationMode: 1
+          conditions:
+            - owner: 2
+              checkScope: 1
+              includeType: 1
+              messageType: 2
+              scopeValue: ''
+              checkType: 2
+              checkValue:
+                - 晚上好
+              thresholdValue: ''
+          nextRelation: -1
+  expected:
+      code: 0
+      message: "SUCCESS"
+#用例9
+- case:
+    description: "接口测试-创建普通系统规则"
+    level: "level0"
+    author: "zhoulingzhi"
+    update: "2021.05.06"
+  http:
+    method: POST
+    path: "/gateway/see-management/rule/create"
+    params:
+      name: 'keyword-scram'
+      desc: '接口测试-创建普通系统规则-算子为关键词-不文明用语'
+      type: 1
+      criticalType: 1
+      groupId: null
+      screenCondtion: [ ]
+      ruleCondition:
+        - conditionRelation: 0
+          violationMode: 1
+          conditions:
+            - owner: 2
+              checkScope: 1
+              includeType: 1
+              messageType: 2
+              scopeValue: ''
+              checkType: 2
+              checkValue:
+                - 滚蛋
+              thresholdValue: ''
+          nextRelation: -1
+
+  expected:
+      code: 0
+      message: "SUCCESS"
+
+#用例10
+- case:
+    description: "接口测试-创建普通系统规则"
+    level: "level0"
+    author: "zhoulingzhi"
+    update: "2021.05.06"
+  http:
+    method: POST
+    path: "/gateway/see-management/rule/create"
+    params:
+      name: 'keyword-swine'
+      desc: '接口测试-创建普通系统规则-算子为关键词-不文明用语'
+      type: 1
+      criticalType: 1
+      groupId: null
+      screenCondtion: [ ]
+      ruleCondition:
+        - conditionRelation: 0
+          violationMode: 1
+          conditions:
+            - owner: 2
+              checkScope: 1
+              includeType: 1
+              messageType: 2
+              scopeValue: ''
+              checkType: 2
+              checkValue:
+                - 讨厌鬼
+              thresholdValue: ''
+          nextRelation: -1
+
+  expected:
+      code: 0
+      message: "SUCCESS"
+
+#用例11
+- case:
+    description: "接口测试-创建普通系统规则"
+    level: "level0"
+    author: "zhoulingzhi"
+    update: "2021.05.06"
+  http:
+    method: POST
+    path: "/gateway/see-management/rule/create"
+    params:
+      name: 'keyword-annoying'
+      desc: '接口测试-创建普通系统规则-算子为关键词-不文明用语'
+      type: 1
+      criticalType: 1
+      groupId: null
+      screenCondtion: [ ]
+      ruleCondition:
+        - conditionRelation: 0
+          violationMode: 1
+          conditions:
+            - owner: 2
+              checkScope: 1
+              includeType: 1
+              messageType: 2
+              scopeValue: ''
+              checkType: 2
+              checkValue:
+                - 招人烦
+              thresholdValue: ''
+          nextRelation: -1
+
+  expected:
+      code: 0
+      message: "SUCCESS"
+
+#用例12
+- case:
+    description: "接口测试-创建普通系统规则"
+    level: "level0"
+    author: "zhoulingzhi"
+    update: "2021.05.06"
+  http:
+    method: POST
+    path: "/gateway/see-management/rule/create"
+    params:
+      name: 'keyword-troubling'
+      desc: '接口测试-创建普通系统规则-算子为关键词-不文明用语'
+      type: 1
+      criticalType: 1
+      groupId: null
+      screenCondtion: [ ]
+      ruleCondition:
+        - conditionRelation: 0
+          violationMode: 1
+          conditions:
+            - owner: 2
+              checkScope: 1
+              includeType: 1
+              messageType: 2
+              scopeValue: ''
+              checkType: 2
+              checkValue:
+                - 烦人
+              thresholdValue: ''
+          nextRelation: -1
+
+  expected:
+      code: 0
+      message: "SUCCESS"
+
+#用例13
+- case:
+    description: "接口测试-创建普通系统规则"
+    level: "level0"
+    author: "zhoulingzhi"
+    update: "2021.05.06"
+  http:
+    method: POST
+    path: "/gateway/see-management/rule/create"
+    params:
+      name: 'keyword-getaway'
+      desc: '接口测试-创建普通系统规则-算子为关键词-不文明用语'
+      type: 1
+      criticalType: 1
+      groupId: null
+      screenCondtion: [ ]
+      ruleCondition:
+        - conditionRelation: 0
+          violationMode: 1
+          conditions:
+            - owner: 2
+              checkScope: 1
+              includeType: 1
+              messageType: 2
+              scopeValue: ''
+              checkType: 2
+              checkValue:
+                - 滚滚滚
+              thresholdValue: ''
+          nextRelation: -1
+
+  expected:
+      code: 0
+      message: "SUCCESS"
+
+#用例14
+- case:
+    description: "接口测试-创建普通系统规则"
+    level: "level0"
+    author: "zhoulingzhi"
+    update: "2021.05.06"
+  http:
+    method: POST
+    path: "/gateway/see-management/rule/create"
+    params:
+      name: 'keyword-shutup'
+      desc: '接口测试-创建普通系统规则-算子为关键词-不文明用语'
+      type: 1
+      criticalType: 1
+      groupId: null
+      screenCondtion: [ ]
+      ruleCondition:
+        - conditionRelation: 0
+          violationMode: 1
+          conditions:
+            - owner: 2
+              checkScope: 1
+              includeType: 1
+              messageType: 2
+              scopeValue: ''
+              checkType: 2
+              checkValue:
+                - shutup
+              thresholdValue: ''
+          nextRelation: -1
+
+  expected:
+      code: 0
+      message: "SUCCESS"
+
+#用例15
+- case:
+    description: "接口测试-创建普通系统规则"
+    level: "level0"
+    author: "zhoulingzhi"
+    update: "2021.05.06"
+  http:
+    method: POST
+    path: "/gateway/see-management/rule/create"
+    params:
+      name: 'keyword-stupid'
+      desc: '接口测试-创建普通系统规则-算子为关键词-不文明用语'
+      type: 1
+      criticalType: 1
+      groupId: null
+      screenCondtion: [ ]
+      ruleCondition:
+        - conditionRelation: 0
+          violationMode: 1
+          conditions:
+            - owner: 2
+              checkScope: 1
+              includeType: 1
+              messageType: 2
+              scopeValue: ''
+              checkType: 2
+              checkValue:
+                - stupid
+              thresholdValue: ''
+          nextRelation: -1
+
+  expected:
+      code: 0
+      message: "SUCCESS"
+
+#用例16
+- case:
+    description: "接口测试-创建普通系统规则"
+    level: "level0"
+    author: "zhoulingzhi"
+    update: "2021.05.06"
+  http:
+    method: POST
+    path: "/gateway/see-management/rule/create"
+    params:
+      name: 'keyword-nonono'
+      desc: '接口测试-创建普通系统规则-算子为关键词-不文明用语'
+      type: 1
+      criticalType: 1
+      groupId: null
+      screenCondtion: [ ]
+      ruleCondition:
+        - conditionRelation: 0
+          violationMode: 1
+          conditions:
+            - owner: 2
+              checkScope: 1
+              includeType: 1
+              messageType: 2
+              scopeValue: ''
+              checkType: 2
+              checkValue:
+                - nonono
+              thresholdValue: ''
+          nextRelation: -1
+
+  expected:
+      code: 0
+      message: "SUCCESS"
+
+#用例17
+- case:
+    description: "接口测试-创建致命系统规则"
+    level: "level0"
+    author: "zhoulingzhi"
+    update: "2021.05.06"
+  http:
+    method: POST
+    path: "/gateway/see-management/rule/create"
+    params:
+      name: 'regular-telphoneNum'
+      desc: '接口测试-创建致命系统规则-算子为正则'
+      type: 1
+      criticalType: 2
+      groupId: null
+      screenCondtion: [ ]
+      ruleCondition:
+        - conditionRelation: 0
+          violationMode: 1
+          conditions:
+            - owner: 2
+              checkScope: 1
+              includeType: 1
+              messageType: 2
+              scopeValue: ''
+              checkType: 3
+              checkValue: ^(13[0-9]|14[5|7]|15[0|1|2|3|4|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$
+          nextRelation: -1
+
+  expected:
+      code: 0
+      message: "SUCCESS"
+
+#用例18
+- case:
+    description: "接口测试-创建致命系统规则"
+    level: "level0"
+    author: "zhoulingzhi"
+    update: "2021.05.06"
+  http:
+    method: POST
+    path: "/gateway/see-management/rule/create"
+    params:
+      name: 'regular-ipaddr'
+      desc: '接口测试-创建致命系统规则-算子为正则'
+      type: 1
+      criticalType: 2
+      groupId: null
+      screenCondtion: [ ]
+      ruleCondition:
+        - conditionRelation: 0
+          violationMode: 1
+          conditions:
+            - owner: 2
+              checkScope: 1
+              includeType: 1
+              messageType: 2
+              scopeValue: ''
+              checkType: 3
+              checkValue: ((2(5[0-5]|[0-4]\d))|[0-1]?\d{1,2})(\.((2(5[0-5]|[0-4]\d))|[0-1]?\d{1,2})){3}
+          nextRelation: -1
+
+  expected:
+      code: 0
+      message: "SUCCESS"
+
+#用例19
+- case:
+    description: "接口测试-创建致命系统规则"
+    level: "level0"
+    author: "zhoulingzhi"
+    update: "2021.05.06"
+  http:
+    method: POST
+    path: "/gateway/see-management/rule/create"
+    params:
+      name: 'regular-capital'
+      desc: '接口测试-创建致命系统规则-算子为正则'
+      type: 1
+      criticalType: 2
+      groupId: null
+      screenCondtion: [ ]
+      ruleCondition:
+        - conditionRelation: 0
+          violationMode: 1
+          conditions:
+            - owner: 2
+              checkScope: 1
+              includeType: 1
+              messageType: 2
+              scopeValue: ''
+              checkType: 3
+              checkValue: ^[A-Z]+$
+          nextRelation: -1
+
+  expected:
+      code: 0
+      message: "SUCCESS"
+
+#用例20
+- case:
+    description: "接口测试-创建致命系统规则"
+    level: "level0"
+    author: "zhoulingzhi"
+    update: "2021.05.06"
+  http:
+    method: POST
+    path: "/gateway/see-management/rule/create"
+    params:
+      name: 'regular-number'
+      desc: '接口测试-创建致命系统规则-算子为正则'
+      type: 1
+      criticalType: 2
+      groupId: null
+      screenCondtion: [ ]
+      ruleCondition:
+        - conditionRelation: 0
+          violationMode: 1
+          conditions:
+            - owner: 2
+              checkScope: 1
+              includeType: 1
+              messageType: 2
+              scopeValue: ''
+              checkType: 3
+              checkValue: ^[0-9]*$
+          nextRelation: -1
+
+  expected:
+      code: 0
+      message: "SUCCESS"
